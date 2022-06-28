@@ -43,8 +43,10 @@ streamlit.dataframe(my_data_row)
 
 add_my_fruit=streamlit.text_input('Which fruit you want to add',)
 
+insert_cmd = "insert into fruit_load_list(Fruit_name) values('{0}')".format(add_my_fruit)
+streamlit.text(insert_cmd)
 
-my_cur.execute("insert into fruit_load_list (Fruit_name) values (?)",(add_my_fruit,))
 
-streamlit.header("insert into fruit_load_list (Fruit_name) values (?)",(add_my_fruit))
+
+
 
