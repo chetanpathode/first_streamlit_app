@@ -46,5 +46,5 @@ add_my_fruit=streamlit.text_input('Which fruit you want to add',)
 
 my_cur.execute("insert into fruit_load_list (Fruit_name) values (?)",(add_my_fruit,))
 
-x="insert into fruit_load_list (Fruit_name) values (?)",(add_my_fruit,)
-print(x)
+streamlit.header("insert into fruit_load_list (Fruit_name) values (?)",(add_my_fruit))
+
